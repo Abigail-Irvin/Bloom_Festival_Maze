@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxvvyj8m11pub"]
+
+[ext_resource type="Script" uid="uid://cxtdjyms7d6g5" path="res://scripts/firefly_ui_element.gd" id="1_71c7u"]
+
+[node name="firefly-sprite" type="HBoxContainer" node_paths=PackedStringArray("firefly_count")]
+custom_minimum_size = Vector2(50, 50)
+offset_right = 154.0
+offset_bottom = 50.0
+script = ExtResource("1_71c7u")
+firefly_count = NodePath("firefly-textbox")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="firefly-textbox" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "2/2
+"
+vertical_alignment = 1

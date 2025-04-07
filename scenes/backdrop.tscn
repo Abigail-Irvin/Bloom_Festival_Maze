@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj0ktmw1bfsyp"]
+
+[ext_resource type="Texture2D" uid="uid://dli53ndjg3j5t" path="res://assets/icon.svg" id="1_hwdtg"]
+
+[node name="Backdrop" type="Sprite2D"]
+position = Vector2(1610.5, 679)
+scale = Vector2(26.1641, 11.6094)
+texture = ExtResource("1_hwdtg")

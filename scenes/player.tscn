@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn4jqbm8r7rjm"]
+
+[ext_resource type="Texture2D" uid="uid://dli53ndjg3j5t" path="res://assets/icon.svg" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://b0niybc7xhcrx" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://dxbltd4ublqsb" path="res://scenes/main_ui.tscn" id="3_qhqgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
+radius = 65.0692
+
+[sub_resource type="Gradient" id="Gradient_g2els"]
+offsets = PackedFloat32Array(0, 0.75974)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qhqgy"]
+gradient = SubResource("Gradient_g2els")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("MainUi")]
+script = ExtResource("1_g2els")
+MainUi = NodePath("CanvasLayer/MainUi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u8vuu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3vyb7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1.52588e-05, 1.52588e-05)
+scale = Vector2(6.78125, 6.4375)
+color = Color(0.93175, 0.929106, 3.85046e-06, 1)
+texture = SubResource("GradientTexture2D_qhqgy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainUi" parent="CanvasLayer" instance=ExtResource("3_qhqgy")]

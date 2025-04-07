@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cgxjfsdg62r3"]
+
+[node name="time_left" type="RichTextLabel"]
+custom_minimum_size = Vector2(250, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Time left: 90 seconds"
