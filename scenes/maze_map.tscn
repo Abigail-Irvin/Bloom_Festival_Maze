@@ -1,0 +1,864 @@
+[gd_scene load_steps=7 format=3 uid="uid://rkbtn7fddmw0"]
+
+[ext_resource type="PackedScene" uid="uid://7x23ey6nxeic" path="res://scenes/backdrop.tscn" id="1_6w2tl"]
+[ext_resource type="PackedScene" uid="uid://b6j3eee6gs2a8" path="res://scenes/hedge_variant1.tscn" id="2_hbmgb"]
+[ext_resource type="PackedScene" uid="uid://cn4jqbm8r7rjm" path="res://scenes/player.tscn" id="2_td77n"]
+[ext_resource type="PackedScene" uid="uid://gctn3qca38hr" path="res://scenes/hedge_variant_2.tscn" id="3_jrmo3"]
+[ext_resource type="PackedScene" uid="uid://b447thhxmjkac" path="res://scenes/win_tile.tscn" id="4_jrmo3"]
+[ext_resource type="PackedScene" uid="uid://del6ws2157r84" path="res://scenes/small_hedge.tscn" id="5_sctjt"]
+
+[node name="MazeMap" type="Node2D"]
+
+[node name="Background_Layer" type="Node2D" parent="."]
+
+[node name="Backdrop" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(646, 317)
+
+[node name="Backdrop2" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(2019, 335)
+
+[node name="Backdrop3" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(614, 1616)
+
+[node name="Backdrop4" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(1988, 1642)
+
+[node name="Backdrop5" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(3358, 1693)
+
+[node name="Backdrop6" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(3413, 369)
+
+[node name="Backdrop7" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(631, 2932)
+
+[node name="Backdrop8" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(1977, 2955)
+
+[node name="Backdrop9" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(3360, 3010)
+
+[node name="Backdrop10" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(3379, 4309)
+
+[node name="Backdrop11" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(1999, 4283)
+
+[node name="Backdrop12" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(613, 4243)
+
+[node name="Backdrop13" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(4801, 397)
+
+[node name="Backdrop14" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(4718, 1710)
+
+[node name="Backdrop15" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(4681, 2988)
+
+[node name="Backdrop16" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(4689, 4297)
+
+[node name="Backdrop17" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(6166, 415)
+
+[node name="Backdrop18" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(6106, 1723)
+
+[node name="Backdrop19" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(6075, 3056)
+
+[node name="Backdrop20" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(6070, 4304)
+
+[node name="Backdrop21" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
+position = Vector2(3672, 5568)
+
+[node name="Player" parent="." instance=ExtResource("2_td77n")]
+position = Vector2(3207, 1668)
+
+[node name="Outer_Top_Wall" type="Node2D" parent="."]
+
+[node name="Hedge" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(76, -773)
+
+[node name="Hedge2" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(330, -773)
+
+[node name="Hedge3" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(581, -773)
+
+[node name="Hedge5" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1080, -773)
+
+[node name="Hedge6" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1334, -773)
+
+[node name="Hedge7" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1585, -773)
+
+[node name="Hedge8" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1830, -773)
+
+[node name="Hedge2Variant" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(827, -775)
+
+[node name="Hedge4" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2335, -771)
+
+[node name="Hedge9" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2589, -771)
+
+[node name="Hedge2Variant2" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(2084, -773)
+
+[node name="Hedge10" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2840, -771)
+
+[node name="Hedge15" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4594, -769)
+
+[node name="Hedge16" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4848, -769)
+
+[node name="Hedge17" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5099, -769)
+
+[node name="Hedge18" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5598, -769)
+
+[node name="Hedge19" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5852, -769)
+
+[node name="Hedge20" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(6103, -769)
+
+[node name="Hedge21" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(6348, -769)
+
+[node name="Hedge2Variant5" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(5345, -771)
+
+[node name="Hedge2Variant6" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6602, -769)
+
+[node name="Hedge11" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(3339, -771)
+
+[node name="Hedge12" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(3593, -771)
+
+[node name="Hedge13" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(3844, -771)
+
+[node name="Hedge14" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4089, -771)
+
+[node name="Hedge2Variant3" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(3086, -773)
+
+[node name="Hedge2Variant4" parent="Outer_Top_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(4343, -771)
+
+[node name="Inner_Group" type="Node2D" parent="."]
+
+[node name="SmallHedge153" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4259, 2317)
+
+[node name="SmallHedge152" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4253, 2617)
+
+[node name="SmallHedge151" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4250, 2917)
+
+[node name="SmallHedge81" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4251, 3191)
+
+[node name="SmallHedge116" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5969, 245)
+
+[node name="SmallHedge106" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5964, 551)
+
+[node name="SmallHedge105" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6013, 807)
+
+[node name="SmallHedge104" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 1106)
+
+[node name="SmallHedge103" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 1407)
+
+[node name="SmallHedge102" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 1707)
+
+[node name="SmallHedge101" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 2004)
+
+[node name="SmallHedge100" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 2306)
+
+[node name="SmallHedge99" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6016, 2610)
+
+[node name="SmallHedge98" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6016, 2912)
+
+[node name="SmallHedge97" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6014, 3214)
+
+[node name="SmallHedge157" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4718, 1743)
+
+[node name="SmallHedge158" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4757, 2319)
+
+[node name="SmallHedge149" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4758, 2620)
+
+[node name="SmallHedge150" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4504, 2920)
+
+[node name="SmallHedge148" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4758, 2922)
+
+[node name="SmallHedge43" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3198, 2641)
+
+[node name="SmallHedge38" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2148, 241)
+
+[node name="SmallHedge13" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2148, 544)
+
+[node name="SmallHedge12" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2148, 844)
+
+[node name="SmallHedge11" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2148, 1144)
+
+[node name="SmallHedge58" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 224)
+
+[node name="SmallHedge57" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 523)
+
+[node name="SmallHedge56" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 825)
+
+[node name="SmallHedge55" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 1124)
+
+[node name="SmallHedge54" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 1420)
+
+[node name="SmallHedge53" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 1721)
+
+[node name="SmallHedge30" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2183, 1743)
+
+[node name="SmallHedge26" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2907, 241)
+
+[node name="SmallHedge16" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2905, 540)
+
+[node name="SmallHedge17" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2915, 842)
+
+[node name="SmallHedge15" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2652, 540)
+
+[node name="SmallHedge4" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2690, 1144)
+
+[node name="SmallHedge2" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2690, 1746)
+
+[node name="SmallHedge68" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(703, 210)
+
+[node name="SmallHedge67" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(703, 512)
+
+[node name="SmallHedge66" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(701, 812)
+
+[node name="SmallHedge65" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(701, 1116)
+
+[node name="SmallHedge64" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(703, 1414)
+
+[node name="SmallHedge108" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4213, -367)
+
+[node name="SmallHedge83" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4210, -63)
+
+[node name="SmallHedge92" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4210, 241)
+
+[node name="SmallHedge21" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4211, 546)
+
+[node name="SmallHedge20" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4208, 849)
+
+[node name="SmallHedge170" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3259, 3216)
+
+[node name="SmallHedge48" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2200, 2343)
+
+[node name="SmallHedge52" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1184, 2343)
+
+[node name="SmallHedge51" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1435, 2343)
+
+[node name="SmallHedge130" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1436, 2645)
+
+[node name="SmallHedge129" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1439, 2943)
+
+[node name="SmallHedge136" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1696, 2945)
+
+[node name="SmallHedge123" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(676, 2948)
+
+[node name="SmallHedge" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2690, 2046)
+
+[node name="SmallHedge37" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 237)
+
+[node name="SmallHedge3" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3702, 1145)
+
+[node name="SmallHedge36" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 537)
+
+[node name="SmallHedge35" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 839)
+
+[node name="SmallHedge29" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2437, 1743)
+
+[node name="SmallHedge34" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 1137)
+
+[node name="SmallHedge31" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1929, 1743)
+
+[node name="SmallHedge33" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 1440)
+
+[node name="SmallHedge32" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1677, 1743)
+
+[node name="SmallHedge25" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3464, 249)
+
+[node name="SmallHedge112" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4966, 247)
+
+[node name="SmallHedge14" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2399, 542)
+
+[node name="SmallHedge18" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3954, 1145)
+
+[node name="SmallHedge19" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4208, 1145)
+
+[node name="SmallHedge22" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3962, 549)
+
+[node name="SmallHedge23" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3713, 549)
+
+[node name="SmallHedge24" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3464, 549)
+
+[node name="SmallHedge76" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4467, 546)
+
+[node name="SmallHedge110" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4717, 547)
+
+[node name="SmallHedge111" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4968, 547)
+
+[node name="SmallHedge113" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5215, 247)
+
+[node name="SmallHedge114" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5217, 545)
+
+[node name="SmallHedge117" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5719, 245)
+
+[node name="SmallHedge167" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5514, 1098)
+
+[node name="SmallHedge39" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3942, 1741)
+
+[node name="SmallHedge71" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3259, 4126)
+
+[node name="SmallHedge72" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3259, 3826)
+
+[node name="SmallHedge73" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3259, 3521)
+
+[node name="SmallHedge74" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4014, 4437)
+
+[node name="SmallHedge75" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4014, 4134)
+
+[node name="SmallHedge166" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5514, 1396)
+
+[node name="SmallHedge77" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4011, 3523)
+
+[node name="SmallHedge80" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4265, 3523)
+
+[node name="SmallHedge147" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4758, 3224)
+
+[node name="SmallHedge165" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5508, 1700)
+
+[node name="SmallHedge164" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5505, 1998)
+
+[node name="SmallHedge154" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4464, 1145)
+
+[node name="SmallHedge155" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4464, 1448)
+
+[node name="SmallHedge156" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4464, 1746)
+
+[node name="SmallHedge159" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5009, 2316)
+
+[node name="SmallHedge160" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5756, 2303)
+
+[node name="SmallHedge161" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5502, 2300)
+
+[node name="SmallHedge162" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5502, 2602)
+
+[node name="SmallHedge163" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5502, 2902)
+
+[node name="SmallHedge168" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5260, 1098)
+
+[node name="SmallHedge169" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5009, 1098)
+
+[node name="SmallHedge84" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5260, 3520)
+
+[node name="SmallHedge85" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5514, 3520)
+
+[node name="SmallHedge91" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5767, 3518)
+
+[node name="SmallHedge93" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(6016, 3516)
+
+[node name="SmallHedge94" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5761, 4418)
+
+[node name="SmallHedge96" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5761, 4116)
+
+[node name="SmallHedge107" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5716, 532)
+
+[node name="SmallHedge86" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4266, 4129)
+
+[node name="SmallHedge87" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4763, 3825)
+
+[node name="SmallHedge88" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5262, 3819)
+
+[node name="SmallHedge89" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5262, 4119)
+
+[node name="SmallHedge95" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(5014, 4124)
+
+[node name="SmallHedge90" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(4766, 4124)
+
+[node name="SmallHedge78" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3514, 3520)
+
+[node name="SmallHedge79" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3766, 3522)
+
+[node name="SmallHedge5" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2941, 1144)
+
+[node name="SmallHedge6" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3695, 1745)
+
+[node name="SmallHedge9" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3445, 2046)
+
+[node name="SmallHedge10" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3699, 2046)
+
+[node name="SmallHedge7" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3449, 1144)
+
+[node name="SmallHedge8" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2944, 2045)
+
+[node name="SmallHedge41" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3449, 2343)
+
+[node name="SmallHedge42" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3449, 2638)
+
+[node name="SmallHedge44" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2950, 2641)
+
+[node name="SmallHedge45" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2702, 2641)
+
+[node name="SmallHedge46" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2451, 2641)
+
+[node name="SmallHedge47" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2203, 2641)
+
+[node name="SmallHedge49" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1946, 2343)
+
+[node name="SmallHedge50" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2207, 2942)
+
+[node name="SmallHedge124" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2210, 3240)
+
+[node name="SmallHedge125" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2210, 3541)
+
+[node name="SmallHedge171" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2462, 3538)
+
+[node name="SmallHedge172" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2714, 3538)
+
+[node name="SmallHedge173" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2968, 3538)
+
+[node name="SmallHedge174" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(3160, 3535)
+
+[node name="SmallHedge126" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(2213, 3842)
+
+[node name="SmallHedge120" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1190, 2644)
+
+[node name="SmallHedge121" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1187, 2948)
+
+[node name="SmallHedge138" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1201, 3545)
+
+[node name="SmallHedge131" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1947, 2642)
+
+[node name="SmallHedge132" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1950, 2943)
+
+[node name="SmallHedge133" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1960, 3241)
+
+[node name="SmallHedge134" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1955, 3542)
+
+[node name="SmallHedge135" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1960, 3843)
+
+[node name="SmallHedge139" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1708, 3846)
+
+[node name="SmallHedge140" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1449, 3843)
+
+[node name="SmallHedge142" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1197, 3846)
+
+[node name="SmallHedge143" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(165, 3829)
+
+[node name="SmallHedge144" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(417, 3829)
+
+[node name="SmallHedge146" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(410, 3529)
+
+[node name="SmallHedge145" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(672, 3829)
+
+[node name="SmallHedge141" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1452, 4143)
+
+[node name="SmallHedge122" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(930, 2951)
+
+[node name="SmallHedge60" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(701, 1714)
+
+[node name="SmallHedge61" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(701, 2011)
+
+[node name="SmallHedge62" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(698, 2311)
+
+[node name="SmallHedge69" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(451, 2313)
+
+[node name="SmallHedge70" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(202, 2313)
+
+[node name="SmallHedge63" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(936, 2339)
+
+[node name="SmallHedge59" parent="Inner_Group" instance=ExtResource("5_sctjt")]
+position = Vector2(1434, 224)
+
+[node name="Outer_Group" type="Node2D" parent="."]
+
+[node name="Outer_Right_Wall" type="Node2D" parent="Outer_Group"]
+
+[node name="Hedge2Variant21" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6692, -519)
+
+[node name="Hedge2Variant22" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, -76)
+
+[node name="Hedge2Variant23" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6697, 179)
+
+[node name="Hedge2Variant24" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6681, 380)
+
+[node name="Hedge2Variant25" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6690, -266)
+
+[node name="Hedge2Variant26" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6683, 627)
+
+[node name="Hedge2Variant27" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 846)
+
+[node name="Hedge2Variant28" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 1083)
+
+[node name="Hedge2Variant29" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 1294)
+
+[node name="Hedge2Variant30" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 1531)
+
+[node name="Hedge2Variant32" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6693, 2038)
+
+[node name="Hedge2Variant13" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6693, 1780)
+
+[node name="Hedge2Variant15" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 2297)
+
+[node name="Hedge2Variant16" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6684, 2552)
+
+[node name="Hedge2Variant6" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6686, 2755)
+
+[node name="Hedge2Variant7" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 2986)
+
+[node name="Hedge2Variant8" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6676, 3211)
+
+[node name="Hedge2Variant3" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 3434)
+
+[node name="Hedge2Variant4" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 3671)
+
+[node name="Hedge2Variant2" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 3947)
+
+[node name="Hedge2Variant" parent="Outer_Group/Outer_Right_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6688, 4184)
+
+[node name="Outer_Bottom_Wall" type="Node2D" parent="Outer_Group"]
+
+[node name="Hedge" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(0, 4311)
+
+[node name="Hedge2" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(254, 4311)
+
+[node name="Hedge3" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(505, 4311)
+
+[node name="Hedge5" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1004, 4311)
+
+[node name="Hedge6" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1258, 4311)
+
+[node name="Hedge7" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1509, 4311)
+
+[node name="Hedge8" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(1754, 4311)
+
+[node name="Hedge2Variant" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(751, 4309)
+
+[node name="Hedge4" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2259, 4313)
+
+[node name="Hedge9" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2513, 4313)
+
+[node name="Hedge2Variant2" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(2008, 4311)
+
+[node name="Hedge10" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(2764, 4313)
+
+[node name="Hedge15" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4518, 4315)
+
+[node name="Hedge16" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4772, 4315)
+
+[node name="Hedge17" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5023, 4315)
+
+[node name="Hedge18" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5522, 4315)
+
+[node name="Hedge19" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(5776, 4315)
+
+[node name="Hedge20" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(6027, 4315)
+
+[node name="Hedge21" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(6272, 4315)
+
+[node name="Hedge2Variant5" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(5269, 4313)
+
+[node name="Hedge22" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(6777, 4317)
+
+[node name="Hedge2Variant6" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(6526, 4315)
+
+[node name="Hedge11" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(3263, 4313)
+
+[node name="Hedge14" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("2_hbmgb")]
+position = Vector2(4013, 4313)
+
+[node name="Hedge2Variant3" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(3010, 4311)
+
+[node name="Hedge2Variant4" parent="Outer_Group/Outer_Bottom_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(4267, 4313)
+
+[node name="Outer_Left_Wall" type="Node2D" parent="Outer_Group"]
+
+[node name="Hedge2Variant21" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-18, -516)
+
+[node name="Hedge2Variant22" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-18, -267)
+
+[node name="Hedge2Variant23" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-19, -17)
+
+[node name="Hedge2Variant24" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-2, 384)
+
+[node name="Hedge2Variant25" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-14, 232)
+
+[node name="Hedge2Variant26" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(10, 593)
+
+[node name="Hedge2Variant27" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 806)
+
+[node name="Hedge2Variant28" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 1043)
+
+[node name="Hedge2Variant29" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 1254)
+
+[node name="Hedge2Variant30" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 1507)
+
+[node name="Hedge2Variant31" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 1767)
+
+[node name="Hedge2Variant32" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 2004)
+
+[node name="Hedge2Variant15" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-2, 2257)
+
+[node name="Hedge2Variant16" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-4, 2509)
+
+[node name="Hedge2Variant7" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-4, 2762)
+
+[node name="Hedge2Variant8" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 3012)
+
+[node name="Hedge2Variant3" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 3264)
+
+[node name="Hedge2Variant4" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 3512)
+
+[node name="Hedge2Variant2" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(0, 3762)
+
+[node name="Hedge2Variant" parent="Outer_Group/Outer_Left_Wall" instance=ExtResource("3_jrmo3")]
+position = Vector2(-5, 4016)
+
+[node name="WinTile" parent="." instance=ExtResource("4_jrmo3")]
+position = Vector2(3638, 4836)

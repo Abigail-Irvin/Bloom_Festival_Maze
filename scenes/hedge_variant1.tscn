@@ -1,17 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6j3eee6gs2a8"]
 
-[ext_resource type="Texture2D" uid="uid://dli53ndjg3j5t" path="res://assets/icon.svg" id="1_65ieu"]
+[ext_resource type="Texture2D" uid="uid://l31atc64seg2" path="res://assets/tree1.png" id="1_1721e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5v0w3"]
-size = Vector2(345, 115)
+size = Vector2(250, 250)
 
 [node name="Hedge" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-107.5, -8.5)
+position = Vector2(0, 500)
 shape = SubResource("RectangleShape2D_5v0w3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-107, -9)
-scale = Vector2(2.67188, 0.859375)
-texture = ExtResource("1_65ieu")
+texture = ExtResource("1_1721e")

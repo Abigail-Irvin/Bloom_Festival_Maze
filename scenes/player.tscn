@@ -1,11 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://cn4jqbm8r7rjm"]
+[gd_scene load_steps=15 format=3 uid="uid://cn4jqbm8r7rjm"]
 
-[ext_resource type="Texture2D" uid="uid://dli53ndjg3j5t" path="res://assets/icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://b0niybc7xhcrx" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://rvovqs2a8ctl" path="res://assets/character_anim_down_0.png" id="2_dqkch"]
 [ext_resource type="PackedScene" uid="uid://dxbltd4ublqsb" path="res://scenes/main_ui.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dbh711pvsr1p5" path="res://assets/character_anim_down_1.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://b55ivotycof3e" path="res://assets/character_anim_left_0.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://bpnb6yvvsm5g4" path="res://assets/character_anim_up_0.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://8wy3o16e62x8" path="res://assets/character_anim_up_1.png" id="5_fjrip"]
+[ext_resource type="Texture2D" uid="uid://c2oe1rdkse34h" path="res://assets/character_anim_left_1.png" id="5_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://bhdxjjd0lb7l" path="res://assets/character_anim_right_0.png" id="6_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://cvaejpylhsua3" path="res://assets/character_anim_right_1.png" id="7_d2wvv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
 radius = 65.0692
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dqkch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qlg0r")
+}],
+"loop": false,
+"name": &"down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_smehm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ur7pv")
+}],
+"loop": false,
+"name": &"left",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y4r1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_d2wvv")
+}],
+"loop": false,
+"name": &"right",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fjrip")
+}],
+"loop": false,
+"name": &"up",
+"speed": 4.0
+}]
 
 [sub_resource type="Gradient" id="Gradient_g2els"]
 offsets = PackedFloat32Array(0, 0.75974)
@@ -16,15 +70,16 @@ gradient = SubResource("Gradient_g2els")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("MainUi")]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
-MainUi = NodePath("CanvasLayer/MainUi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_u8vuu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_3vyb7")
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"up"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -36,4 +91,5 @@ texture = SubResource("GradientTexture2D_qhqgy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MainUi" parent="CanvasLayer" instance=ExtResource("3_qhqgy")]
+[node name="MainUi" parent="CanvasLayer" node_paths=PackedStringArray("playerNode") instance=ExtResource("3_qhqgy")]
+playerNode = NodePath("../..")
