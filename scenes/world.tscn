@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ulfebemuajtu"]
+[gd_scene load_steps=2 format=3 uid="uid://ulfebemuajtu"]
 
-[ext_resource type="PackedScene" uid="uid://cn4jqbm8r7rjm" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://rkbtn7fddmw0" path="res://scenes/maze_map.tscn" id="1_rwgxs"]
 
 [node name="World" type="Node2D"]
 
 [node name="MazeMap" parent="." instance=ExtResource("1_rwgxs")]
 position = Vector2(-1637, -635)
-
-[node name="Player" parent="." instance=ExtResource("1_nnsk1")]
-position = Vector2(1696, 1046)
