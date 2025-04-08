@@ -3,12 +3,13 @@ extends CharacterBody2D
 
 
 const SPEED: float = 300.0
-var win_state: int = 0
-var paused: bool = false
+var win_state: bool = false
+var paused: bool = true
 @export var MainUi: Control = null
-@export var firefly_count: int = 0
+@export var firefly_count: int = 2
 @export var time_left: float = 90
 @onready var firefly_jar = preload("res://scenes/firefly_jar.tscn")
+var game_over: bool = false
 
 func _ready() -> void:
 	MainUi.toggle_pause_menu(paused)
@@ -22,7 +23,12 @@ func _physics_process(delta: float) -> void:
 	# ----------
 	# delta : float
 	#	represents the time between frames, used to do time-based calculations
-	if is_locked():
+	if not game_over and is_locked():
+		# lose condition
+		game_over = true
+		MainUi.end_game()
+		
+	if is_locked() or is_paused():
 		return
 	var x_axis := Input.get_axis("ui_left", "ui_right")
 	if x_axis:
@@ -50,7 +56,7 @@ func _input(event: InputEvent) -> void:
 	#	input event given by user
 	if event.is_action_pressed("pause"):
 		toggle_pause()
-	if is_locked():
+	if is_locked() or is_paused():
 		return
 	if event.is_action_pressed("drop") and firefly_count > 0:
 		firefly_count -= 1
@@ -62,8 +68,13 @@ func is_locked() -> bool:
 	# Description
 	# ----------
 	# Returns a bool stating if the game should be considered "locked"
-	# i.e. paused or won/lost.
-	return win_state or time_left < 0.0 or paused
+	return win_state or time_left < 0.0
+
+func is_paused() -> bool:
+	# Description
+	# ----------
+	# Returns a bool stating if the game is paused
+	return paused
 	
 func add_light() -> void:
 	# Description
@@ -75,12 +86,11 @@ func win_game() -> void:
 	# Description
 	# ----------
 	# Callback function activated when player runs across the win area.
-	win_state = 1
+	win_state = true
+	game_over = true
+	MainUi.end_game()
 
 func toggle_pause() -> void:
 	if not (win_state or time_left < 0.0):
 		paused = !paused
 		MainUi.toggle_pause_menu(paused)
-		
-func exit_game() -> void:
-	print("quit! :3")

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dxvvyj8m11pub" path="res://scenes/firefly_ui_element.tscn" id="1_fnul3"]
 [ext_resource type="PackedScene" uid="uid://cgxjfsdg62r3" path="res://scenes/time_left_ui_element.tscn" id="2_513t2"]
 
-[node name="MainUi" type="Control" node_paths=PackedStringArray("firefly_text_ref", "timer_text_ref", "pauseMenu")]
+[node name="MainUi" type="Control" node_paths=PackedStringArray("firefly_text_ref", "timer_text_ref", "pauseMenu", "endMenu", "endBlurb")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,9 @@ grow_vertical = 2
 script = ExtResource("1_e6fyy")
 firefly_text_ref = NodePath("HBoxContainer/Firefly-sprite/firefly-textbox")
 timer_text_ref = NodePath("HBoxContainer/TimeLeftUiElement")
-pauseMenu = NodePath("Pause Menu")
+pauseMenu = NodePath("Pause_Menu")
+endMenu = NodePath("End_Screen")
+endBlurb = NodePath("End_Screen/Text/End_Blurb")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -33,7 +35,8 @@ size_flags_horizontal = 3
 [node name="TimeLeftUiElement" parent="HBoxContainer" instance=ExtResource("2_513t2")]
 layout_mode = 2
 
-[node name="Pause Menu" type="Panel" parent="."]
+[node name="Pause_Menu" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -44,7 +47,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Text" type="VBoxContainer" parent="Pause Menu"]
+[node name="Text" type="VBoxContainer" parent="Pause_Menu"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -54,7 +57,7 @@ offset_right = 75.0
 offset_bottom = 54.0
 grow_horizontal = 2
 
-[node name="Paused" type="RichTextLabel" parent="Pause Menu/Text"]
+[node name="Paused" type="RichTextLabel" parent="Pause_Menu/Text"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 text = "Paused"
@@ -62,7 +65,7 @@ scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Instructions" type="RichTextLabel" parent="Pause Menu/Text"]
+[node name="Instructions" type="RichTextLabel" parent="Pause_Menu/Text"]
 custom_minimum_size = Vector2(400, 300)
 layout_mode = 2
 text = "Welcome to the Full Bloom Festival!
@@ -72,7 +75,7 @@ To help you hopefully find your way, we've given you a couple of firefly jars to
 
 Try to find the end of the forest before the time runs out, good luck!"
 
-[node name="Buttons" type="VBoxContainer" parent="Pause Menu"]
+[node name="Buttons" type="VBoxContainer" parent="Pause_Menu"]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 1
 anchors_preset = 7
@@ -86,15 +89,81 @@ offset_right = 125.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Return" type="Button" parent="Pause Menu/Buttons"]
+[node name="Return" type="Button" parent="Pause_Menu/Buttons"]
 custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
-text = "Return"
+text = "Continue"
 
-[node name="Quit" type="Button" parent="Pause Menu/Buttons"]
+[node name="Quit" type="Button" parent="Pause_Menu/Buttons"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="Pause Menu/Buttons/Return" to="." method="_on_return_pressed"]
-[connection signal="pressed" from="Pause Menu/Buttons/Quit" to="." method="_on_quit_pressed"]
+[node name="End_Screen" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text" type="VBoxContainer" parent="End_Screen"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_right = 75.0
+offset_bottom = 54.0
+grow_horizontal = 2
+
+[node name="Header" type="RichTextLabel" parent="End_Screen/Text"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "The End!"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="End_Blurb" type="RichTextLabel" parent="End_Screen/Text"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+text = "<Really cool end text> :3"
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="End_Screen"]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -104.0
+offset_right = 125.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Restart" type="Button" parent="End_Screen/Buttons"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+text = "Restart"
+
+[node name="Quit" type="Button" parent="End_Screen/Buttons"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Pause_Menu/Buttons/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Pause_Menu/Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="End_Screen/Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="End_Screen/Buttons/Quit" to="." method="_on_quit_pressed"]
