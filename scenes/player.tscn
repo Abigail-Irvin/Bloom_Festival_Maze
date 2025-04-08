@@ -36,4 +36,5 @@ texture = SubResource("GradientTexture2D_qhqgy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="MainUi" parent="CanvasLayer" instance=ExtResource("3_qhqgy")]
+[node name="MainUi" parent="CanvasLayer" node_paths=PackedStringArray("playerNode") instance=ExtResource("3_qhqgy")]
+playerNode = NodePath("../..")
