@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bw358dmdadh3t"]
+[gd_scene load_steps=8 format=3 uid="uid://bw358dmdadh3t"]
 
 [ext_resource type="Script" uid="uid://bjo52u786gybi" path="res://scripts/firefly_jar.gd" id="1_lwxam"]
-[ext_resource type="Texture2D" uid="uid://dli53ndjg3j5t" path="res://assets/icon.svg" id="1_moif0"]
+[ext_resource type="Texture2D" uid="uid://cqkahi781lnkb" path="res://assets/jar1.png" id="2_ojwhb"]
+[ext_resource type="Texture2D" uid="uid://b4soh73ayubuc" path="res://assets/jar2.png" id="3_iibv5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_moif0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ojwhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iibv5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fw1o1"]
 radius = 108.074
@@ -18,9 +33,10 @@ fill_from = Vector2(0.5, 0.5)
 [node name="firefly-jar" type="Node2D"]
 script = ExtResource("1_lwxam")
 
-[node name="firefly-sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_moif0")
+[node name="firefly-sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.06, 0.06)
+sprite_frames = SubResource("SpriteFrames_moif0")
+autoplay = "default"
 
 [node name="Area2D" type="Area2D" parent="firefly-sprite"]
 

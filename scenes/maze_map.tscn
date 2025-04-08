@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://rkbtn7fddmw0"]
+[gd_scene load_steps=9 format=3 uid="uid://rkbtn7fddmw0"]
 
 [ext_resource type="PackedScene" uid="uid://7x23ey6nxeic" path="res://scenes/backdrop.tscn" id="1_6w2tl"]
 [ext_resource type="PackedScene" uid="uid://b6j3eee6gs2a8" path="res://scenes/hedge_variant1.tscn" id="2_hbmgb"]
@@ -7,7 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://b447thhxmjkac" path="res://scenes/win_tile.tscn" id="4_jrmo3"]
 [ext_resource type="PackedScene" uid="uid://del6ws2157r84" path="res://scenes/small_hedge.tscn" id="5_sctjt"]
 
+[sub_resource type="Gradient" id="Gradient_td77n"]
+offsets = PackedFloat32Array(0.993506, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8mn5m"]
+gradient = SubResource("Gradient_td77n")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="MazeMap" type="Node2D"]
+
+[node name="Backdrop" parent="." instance=ExtResource("1_6w2tl")]
+position = Vector2(-1510, 1716)
+scale = Vector2(50, 50)
 
 [node name="Background_Layer" type="Node2D" parent="."]
 
@@ -74,8 +87,9 @@ position = Vector2(6070, 4304)
 [node name="Backdrop21" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
 position = Vector2(3672, 5568)
 
-[node name="Player" parent="." instance=ExtResource("2_td77n")]
+[node name="Player" parent="." node_paths=PackedStringArray("background_ref") instance=ExtResource("2_td77n")]
 position = Vector2(3207, 1668)
+background_ref = NodePath("../Background_Layer")
 
 [node name="Outer_Top_Wall" type="Node2D" parent="."]
 
@@ -862,3 +876,9 @@ position = Vector2(-5, 4016)
 
 [node name="WinTile" parent="." instance=ExtResource("4_jrmo3")]
 position = Vector2(3638, 4836)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(1000, 1000)
+energy = 0.9
+blend_mode = 1
+texture = SubResource("GradientTexture2D_8mn5m")
