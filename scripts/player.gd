@@ -10,6 +10,7 @@ var paused: bool = true
 @export var time_left: float = 90
 @onready var animation_sprite: AnimatedSprite2D = $Animation
 @onready var firefly_jar = preload("res://scenes/firefly_jar.tscn")
+@export var background_ref: Node = null
 var game_over: bool = false
 
 func _ready() -> void:
@@ -77,7 +78,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("drop") and firefly_count > 0:
 		firefly_count -= 1
 		var instance = firefly_jar.instantiate()
-		get_tree().root.add_child(instance)
+		background_ref.add_child(instance)
 		instance.global_position = self.global_position
 		
 func is_locked() -> bool:
