@@ -17,12 +17,10 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 
 [node name="MazeMap" type="Node2D"]
-
-[node name="Backdrop" parent="." instance=ExtResource("1_6w2tl")]
-position = Vector2(-1510, 1716)
-scale = Vector2(50, 50)
+y_sort_enabled = true
 
 [node name="Background_Layer" type="Node2D" parent="."]
+z_index = -1
 
 [node name="Backdrop" parent="Background_Layer" instance=ExtResource("1_6w2tl")]
 position = Vector2(646, 317)
@@ -88,10 +86,12 @@ position = Vector2(6070, 4304)
 position = Vector2(3672, 5568)
 
 [node name="Player" parent="." node_paths=PackedStringArray("background_ref") instance=ExtResource("2_td77n")]
-position = Vector2(3207, 1668)
+y_sort_enabled = false
+position = Vector2(3180, 1668)
 background_ref = NodePath("../Background_Layer")
 
 [node name="Outer_Top_Wall" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Hedge" parent="Outer_Top_Wall" instance=ExtResource("2_hbmgb")]
 position = Vector2(76, -773)
@@ -175,6 +175,7 @@ position = Vector2(3086, -773)
 position = Vector2(4343, -771)
 
 [node name="Inner_Group" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="SmallHedge153" parent="Inner_Group" instance=ExtResource("5_sctjt")]
 position = Vector2(4259, 2317)
@@ -666,6 +667,7 @@ position = Vector2(936, 2339)
 position = Vector2(1434, 224)
 
 [node name="Outer_Group" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Outer_Right_Wall" type="Node2D" parent="Outer_Group"]
 
@@ -878,7 +880,13 @@ position = Vector2(-5, 4016)
 position = Vector2(3638, 4836)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
 scale = Vector2(1000, 1000)
 energy = 0.9
 blend_mode = 1
 texture = SubResource("GradientTexture2D_8mn5m")
+
+[node name="Backdrop" parent="." instance=ExtResource("1_6w2tl")]
+z_index = -2
+position = Vector2(3866, 2676)
+scale = Vector2(10, 10)

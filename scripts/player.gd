@@ -5,13 +5,12 @@ extends CharacterBody2D
 const SPEED: float = 300.0
 var win_state: bool = false
 var paused: bool = true
+var timer: float = 0.0
 @onready var MainUi: Control = $CanvasLayer/MainUi
-@export var firefly_count: int = 2
-@export var time_left: float = 90
+@export var firefly_count: int = 3
 @onready var animation_sprite: AnimatedSprite2D = $Animation
 @onready var firefly_jar = preload("res://scenes/firefly_jar.tscn")
 @export var background_ref: Node = null
-var game_over: bool = false
 
 func _ready() -> void:
 	MainUi.toggle_pause_menu(paused)
@@ -24,13 +23,8 @@ func _physics_process(delta: float) -> void:
 	# Parameters
 	# ----------
 	# delta : float
-	#	represents the time between frames, used to do time-based calculations
-	if not game_over and is_locked():
-		# lose condition
-		game_over = true
-		MainUi.end_game()
-		
-	if is_locked() or is_paused():
+	#	represents the time between frames, used to do time-based calculations	
+	if is_paused():
 		return
 	var x_axis := Input.get_axis("ui_left", "ui_right")
 	var y_axis := Input.get_axis("ui_up", "ui_down")
@@ -58,8 +52,8 @@ func _physics_process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 		
 	move_and_slide()
-	time_left -= delta
-	MainUi.ui_update(firefly_count, time_left)
+	timer += delta
+	MainUi.ui_update(firefly_count)
 
 func _input(event: InputEvent) -> void:
 	# Description
@@ -73,19 +67,13 @@ func _input(event: InputEvent) -> void:
 	#	input event given by user
 	if event.is_action_pressed("pause"):
 		toggle_pause()
-	if is_locked() or is_paused():
+	if is_paused():
 		return
 	if event.is_action_pressed("drop") and firefly_count > 0:
 		firefly_count -= 1
 		var instance = firefly_jar.instantiate()
 		background_ref.add_child(instance)
 		instance.global_position = self.global_position
-		
-func is_locked() -> bool:
-	# Description
-	# ----------
-	# Returns a bool stating if the game should be considered "locked"
-	return win_state or time_left < 0.0
 
 func is_paused() -> bool:
 	# Description
@@ -104,10 +92,9 @@ func win_game() -> void:
 	# ----------
 	# Callback function activated when player runs across the win area.
 	win_state = true
-	game_over = true
-	MainUi.end_game()
+	MainUi.end_game(timer)
 
 func toggle_pause() -> void:
-	if not (win_state or time_left < 0.0):
+	if not win_state:
 		paused = !paused
 		MainUi.toggle_pause_menu(paused)

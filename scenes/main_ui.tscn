@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxbltd4ublqsb"]
+[gd_scene load_steps=3 format=3 uid="uid://dxbltd4ublqsb"]
 
 [ext_resource type="Script" uid="uid://bw32anqjrjljw" path="res://scripts/main_ui.gd" id="1_e6fyy"]
 [ext_resource type="PackedScene" uid="uid://dxvvyj8m11pub" path="res://scenes/firefly_ui_element.tscn" id="1_fnul3"]
-[ext_resource type="PackedScene" uid="uid://cgxjfsdg62r3" path="res://scenes/time_left_ui_element.tscn" id="2_513t2"]
 
-[node name="MainUi" type="Control" node_paths=PackedStringArray("firefly_text_ref", "timer_text_ref", "pauseMenu", "endMenu", "endBlurb")]
+[node name="MainUi" type="Control" node_paths=PackedStringArray("firefly_text_ref", "pauseMenu", "endMenu", "endBlurb")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +12,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_e6fyy")
 firefly_text_ref = NodePath("HBoxContainer/Firefly-sprite/firefly-textbox")
-timer_text_ref = NodePath("HBoxContainer/TimeLeftUiElement")
 pauseMenu = NodePath("Pause_Menu")
 endMenu = NodePath("End_Screen")
 endBlurb = NodePath("End_Screen/Text/End_Blurb")
@@ -32,11 +30,7 @@ grow_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TimeLeftUiElement" parent="HBoxContainer" instance=ExtResource("2_513t2")]
-layout_mode = 2
-
 [node name="Pause_Menu" type="Panel" parent="."]
-visible = false
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 8
@@ -71,9 +65,10 @@ layout_mode = 2
 text = "Welcome to the Full Bloom Festival!
 To get to the main party, you'll need to navigate your way through the dark forest, but be careful as you can easily get lost!
 
-To help you hopefully find your way, we've given you a couple of firefly jars to help mark small locations with a light source, place them down with (Q), and pick them up with (E).  Bring up this menu anytime with (Esc).
+To help you hopefully find your way, we've given you a couple of firefly jars to help mark small locations with a light source, place them down with (Q), and pick them up with (E). 
+Movement is Left, Right, Up, and Down arrows. Bring up this menu anytime with (Esc).
 
-Try to find the end of the forest before the time runs out, good luck!"
+Try to find the end of the forest, good luck!"
 
 [node name="Buttons" type="VBoxContainer" parent="Pause_Menu"]
 custom_minimum_size = Vector2(0, 125)
